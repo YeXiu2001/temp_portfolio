@@ -50,12 +50,12 @@ function lshowImage(index) {
   }
   
   lprev.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    currentIndex = (currentIndex === 0) ? limages.length - 1 : currentIndex - 1;
     lshowImage(currentIndex);
   });
   
   lnext.addEventListener('click', () => {
-    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    currentIndex = (currentIndex === limages.length - 1) ? 0 : currentIndex + 1;
     lshowImage(currentIndex);
   });
 
@@ -78,11 +78,37 @@ function lshowImage(index) {
       }
 
         mprev.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            currentIndex = (currentIndex === 0) ? mimages.length - 1 : currentIndex - 1;
             mshowImage(currentIndex);
         });
 
         mnext.addEventListener('click', () => {
-            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            currentIndex = (currentIndex === mimages.length - 1) ? 0 : currentIndex + 1;
             mshowImage(currentIndex);
         });
+
+        const timg1 = require('./assets/IOT/timg1.png');
+        const timg2 = require('./assets/IOT/timg2.png');
+        const timg4 = require('./assets/IOT/timg4.png');
+        const timg5 = require('./assets/IOT/timg5.png');
+        const timg6 = require('./assets/IOT/timg6.png');
+    
+        const timages = [timg1,timg2,timg4,timg5,timg6];
+    
+        const timg = document.getElementById('timg');
+        const tprev = document.getElementById('tprev');
+        const tnext = document.getElementById('tnext');
+    
+        function tshowImage(index) {
+          timg.src = timages[index];
+          }
+    
+          tprev.addEventListener('click', () => {
+                currentIndex = (currentIndex === 0) ? timages.length - 1 : currentIndex - 1;
+                tshowImage(currentIndex);
+            });
+    
+            tnext.addEventListener('click', () => {
+                currentIndex = (currentIndex === timages.length - 1) ? 0 : currentIndex + 1;
+                tshowImage(currentIndex);
+            });
